@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/insure/landing/page/static/css/main.115ab4f0.css",
+    "main.js": "/insure/landing/page/static/js/main.750eec3f.js",
+    "static/js/787.a042384d.chunk.js": "/insure/landing/page/static/js/787.a042384d.chunk.js",
+    "static/media/image-intro-desktop.jpg": "/insure/landing/page/static/media/image-intro-desktop.2f3429f63753a67e322b.jpg",
+    "static/media/image-intro-mobile.jpg": "/insure/landing/page/static/media/image-intro-mobile.8b8c3185ce1388b2bb9e.jpg",
+    "static/media/bg-pattern-intro-right-desktop.png": "/insure/landing/page/static/media/bg-pattern-intro-right-desktop.d4b157ccd641c5a63658.png",
+    "index.html": "/insure/landing/page/index.html",
+    "main.115ab4f0.css.map": "/insure/landing/page/static/css/main.115ab4f0.css.map",
+    "main.750eec3f.js.map": "/insure/landing/page/static/js/main.750eec3f.js.map",
+    "787.a042384d.chunk.js.map": "/insure/landing/page/static/js/787.a042384d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.115ab4f0.css",
+    "static/js/main.750eec3f.js"
+  ]
+}
