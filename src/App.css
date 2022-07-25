@@ -1,38 +1,378 @@
-.App {
+/* start navbar  */
+.container{
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+.btn{
+  padding: 0.5rem 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+}
+@media screen and (max-width:767px) {
+    .btn{
+      font-size: 0.7rem;
+    }
+}
+.black{
+  border: 2px solid var(--Dark-Violet);
+  color: var(--Dark-Violet);
+}
+.black:hover{
+  background-color: var(--Dark-Violet);
+  color: var(--Very-Light-Gray);
+}
+.white{
+  border: 2px solid var(--Very-Light-Gray);
+  color: var(--Very-Light-Gray);
+  width: 80%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.white:hover{
+  background-color: var(--Very-Light-Gray);
+  color: var(--Dark-Violet);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: var(--Very-Light-Gray);
+  padding: 1rem 0rem;
+  z-index: 100;
+}
+.logo{
+  margin-left: 6rem;
+}
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s linear;
+  margin-right: 6rem;
+}
+.nav-links a{
+  color: var(--Dark-Violet);
+}
+.menu{
+  display: none;
+  cursor: pointer;
+  margin-right: 2rem;
+  z-index: 100;
+}
+@media screen and (max-width:767px) {
+  .menu{
+    display: flex;
+  }
+  .nav-links{
+    position: absolute;
+    top: -200%;
+  }
+  .nav-links.open{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 100%;
+    background-color: var(--Dark-Violet);
+    background-image: url(./images/bg-pattern-mobile-nav.png);
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .nav-links a{
+    color: var(--Very-Light-Gray);
+    font-size: 2rem;
+  }
+  .logo{
+    margin-left: 2rem;
   }
 }
+/* end navbar  */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* start hero */
+.hero{
+  background-color: var(--Dark-Violet);
+  width: 100%;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 6rem;
+  gap: 60px;
+}
+.hero-info {
+  color: var(--Very-Light-Gray);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  gap: 30px;
+}
+.hero-info h1{
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 3rem);
+}
+.hero-info .btn{
+  width: 120px;
+}
+.hero .img{
+  width:100%;
+  background-image: url(./images/image-intro-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120%;
+  z-index: 1;
+  margin-top: 150px;
+}
+.right{
+  width: 300px;
+  height: 300px;
+  right: 0px;
+  top: 50px;
+  position: absolute;
+  background-image: url(./images/bg-pattern-intro-right-desktop.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+.left{
+  width: 300px;
+  height: 300px;
+  left: -100px;
+  top: 400px;
+  position: absolute;
+  background-image: url(./images/bg-pattern-intro-left-desktop.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+@media screen and (max-width:767px) {
+    .hero{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: auto;
+      padding: 0;
+      gap: 100px;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .hero .img{
+      order: 1;
+      margin-top: 0px;
+      height: 451px;
+      background-image: url(./images/image-intro-mobile.jpg);
+      background-position: top;
+      z-index: 11;
+    }
+    .hero-info{
+      order: 2;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+    }
+    .right{
+      width: 124px;
+      height: 330px;
+      right: 0px;
+      top: 900px;
+      position: absolute;
+      background-image: url(./images/bg-pattern-intro-right-mobile.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+    .left{
+      width:168px;
+      height: 165px;
+      left: 0px;
+      top: 500px;
+      position: absolute;
+      background-image: url(./images/bg-pattern-intro-left-mobile.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* end hero */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* start features  */
+
+.features{
+  margin-top: 200px;
+  padding: 1rem 6rem;
+  position: relative;
+}
+.features .line{
+  width: 100px;
+  height: 2px;
+  background-color: var(--Dark-Grayish-Violet);
+  position: absolute;
+}
+.features h2{
+  margin: 40px 0;
+  font-size: 2.2rem;
+  color: var(--Dark-Violet);
+}
+.cards{
+  display: flex;
+  gap: 40px;
+}
+.cards h3{
+  margin: 20px 0;
+  color: var(--Dark-Violet);
+}
+.cards p{
+  color: var(--Dark-Grayish-Violet);
+}
+@media screen and (max-width:767px) {
+    .features{
+      padding: 1rem;
+      text-align: center;
+    }
+    .cards{
+      flex-wrap: wrap;
+      
+    }
+    .line{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+}
+/* end features  */
+
+/* start about */
+.about{
+  padding: 1rem 6rem;
+  margin-top: 6rem;
+}
+.find-more{
+  background-color: var(--Dark-Violet);
+  color: var(--Very-Light-Gray);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(./images//bg-pattern-how-we-work-desktop.png);
+  background-position: right;
+  background-size: 500px;
+  background-repeat: no-repeat;
+}
+.find-more h2{
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+}
+@media screen and (max-width:767px) {
+    .about{
+      padding: 1rem 2rem;
+      margin-top: 6rem;
+    }
+    .find-more{
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      background-image: url(./images//bg-pattern-how-we-work-mobile.png);
+      background-size: 300px;
+
+    }
+    .find-more .btn{
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+}
+/* end about */
+
+/* start footer */
+.footer{
+  background-color: var(--Very-Light-Gray);
+  background-image: url(./images//bg-pattern-footer-desktop.png);
+  background-position: left;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  padding: 2rem 6rem;
+  margin-top: 6rem;
+}
+.footer .social{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  position: relative;
+}
+.footer .social::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 10px;
+  background-color: var(--Dark-Grayish-Violet);
+  opacity: 0.2;
+}
+.footer .social .logo{
+  margin-left: 0;
+}
+.social-links{
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+.links{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 50px;
+  text-transform: uppercase;
+}
+.group{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.group h3{
+  color: var(--Dark-Grayish-Violet);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.group a{
+  color: var(--Dark-Violet);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all .3s ease-in-out;
+}
+.group a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width:767px) {
+  .footer{
+    background-image: url(./images/bg-pattern-footer-mobile.png);
+    background-position: top;
+    background-size: 800px;
   }
-  to {
-    transform: rotate(360deg);
+  .footer .social{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .links{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
+/* end footer */
